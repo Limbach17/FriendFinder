@@ -2,8 +2,8 @@ var path = require("path");
 var express = require("express");
 var env = require("dotenv").config();
 
-var api = require("./routing/apiRoutes.js");
-var html = require("./routing/htmlRoutes.js");
+var api = require("./app/routing/apiRoutes.js");
+var html = require("./app/routing/htmlRoutes.js");
 
 var app = express();
 
