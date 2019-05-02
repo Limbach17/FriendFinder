@@ -168,7 +168,8 @@
                     </div>
                         <footer class="footer">
                             <div class="container">
-                                <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/Limbach17/FriendFinder">Github repo</a>
+                                <p><a href="/api/friends" target="blank">API Friends List</a> | 
+                                    <a href="https://github.com/Limbach17/FriendFinder" target="blank">Github repo</a>
                             </div>
                         </footer>
 
@@ -181,19 +182,19 @@
             event.preventDefault();
 
             var newFriend = {
-                friendName: $("#friend-name").val().trim(),
-                friendPic: $("#pict-link").val().trim(),
+                friendName: $("#friend-name").val(),
+                friendPic: $("#pict-link").val(),
                 scores: [
-                    $("#question-1").parseInt(),
-                    $("#question-2").parseInt(),
-                    $("#question-3").parseInt(),
-                    $("#question-4").parseInt(),
-                    $("#question-5").parseInt(),
-                    $("#question-6").parseInt(),
-                    $("#question-7").parseInt(),
-                    $("#question-8").parseInt(),
-                    $("#question-9").parseInt(),
-                    $("#question-10").parseInt()
+                    $("#question-1").val(),
+                    $("#question-2").val(),
+                    $("#question-3").val(),
+                    $("#question-4").val(),
+                    $("#question-5").val(),
+                    $("#question-6").val(),
+                    $("#question-7").val(),
+                    $("#question-8").val(),
+                    $("#question-9").val(),
+                    $("#question-10").val()
                 ]
             };
 
@@ -205,18 +206,21 @@
                         alert("Cool! Here are some compatable buddies.");
                     }
 
-                    $("#friend-name").val("");
+                    else {
+                        alert("Complete the survey before continuing.");
+                    }
+                 /* $("#friend-name").val("");
                     $("#pict-link").val("");
-                    $("#question-1").val("--");
-                    $("#question-2").val("--");
-                    $("#question-3").val("--");
-                    $("#question-4").val("--");
-                    $("#question-5").val("--");
-                    $("#question-6").val("--");
-                    $("#question-7").val("--");
-                    $("#question-8").val("--");
-                    $("#question-9").val("--");
-                    $("#question-10").val("--");
+                    $("#question-1").val("");
+                    $("#question-2").val("");
+                    $("#question-3").val("");
+                    $("#question-4").val("");
+                    $("#question-5").val("");
+                    $("#question-6").val("");
+                    $("#question-7").val("");
+                    $("#question-8").val("");
+                    $("#question-9").val("");
+                    $("#question-10").val(""); */
                 });
         });
     </script>
