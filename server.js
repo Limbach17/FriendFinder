@@ -9,6 +9,8 @@ var app = express();
 
 var PORT = process.env.PORT;
 
+app.use(html);
+app.use(api);
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
