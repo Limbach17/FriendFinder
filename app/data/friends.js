@@ -1,4 +1,4 @@
-var peeps = [
+var friends = [
     {
     "name":"Matt",
     "photo":"../assets/img/matt.jpg",
@@ -16,3 +16,5 @@ var peeps = [
       ]
     }
 ];
+
+module.exports = friends;
