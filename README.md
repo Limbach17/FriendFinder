@@ -4,7 +4,7 @@ Friend Finder is an application that surveys users on value statements and
 tabulates their responses. These responses are then compared against the responses of
 existing users to determine close matches.
 
-App location: https://friend-me-up-scotty.herokuapp.com/survey
+App location: https://friend-me-up-scotty.herokuapp.com
 
 ## Installation
 
