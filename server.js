@@ -7,6 +7,9 @@ var html = require("./app/routing/htmlRoutes.js");
 
 var app = express();
 
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+
 var PORT = process.env.PORT;
 
 app.use(api);

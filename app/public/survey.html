@@ -161,7 +161,7 @@
                         <br>
                         <br>
 
-                        <button type="submit" id="submit-survey" class="btn btn-primary submit btn-lg btn-block">submit</button>
+                        <button type="submit" id="submit-survey" class="btn btn-primary submit btn-lg btn-block" formaction="/survey/alert">submit</button>
                         <br>
                         <hr>
 
@@ -181,9 +181,9 @@
         $("#submit-survey").on("click", function (event){
             event.preventDefault();
 
-            var newFriend = {
-                friendName: $("#friend-name").val(),
-                friendPic: $("#pict-link").val(),
+            var newUser = {
+                name: $("#friend-name").val(),
+                picture: $("#pict-link").val(),
                 scores: [
                     $("#question-1").val(),
                     $("#question-2").val(),
@@ -198,11 +198,11 @@
                 ]
             };
 
-            console.log(newFriend);
+            /// newUser dat is getting logged, but not posted///
+            console.log(newUser);
 
-            $.post("/api/friends", newFriend,
+            $.post("/api/friends", newUser,
                 function(){
-                    alert("Cool! Here are some compatable buddies.");
                   
                     $("#friend-name").val("");
                     $("#pict-link").val("");
@@ -218,7 +218,7 @@
                     $("#question-10").val(""); 
                 });
         });
-        
+
     </script>
         
     </body>
