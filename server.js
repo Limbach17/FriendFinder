@@ -14,11 +14,11 @@ app.set("view engine", "handlebars");
 
 var PORT = process.env.PORT;
 
-app.use(api);
-app.use(html);
-
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+app.use(api);
+app.use(html);
 
 app.listen(PORT, function(){
     console.log("Server listening on http://localhost:" + PORT);
