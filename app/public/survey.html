@@ -201,15 +201,10 @@
             console.log(newFriend);
 
             $.post("/api/friends", newFriend,
-                function(data){
-                    if (data) {
-                        alert("Cool! Here are some compatable buddies.");
-                    }
-
-                    else {
-                        alert("Complete the survey before continuing.");
-                    }
-                 /* $("#friend-name").val("");
+                function(){
+                    alert("Cool! Here are some compatable buddies.");
+                  
+                    $("#friend-name").val("");
                     $("#pict-link").val("");
                     $("#question-1").val("");
                     $("#question-2").val("");
@@ -220,9 +215,10 @@
                     $("#question-7").val("");
                     $("#question-8").val("");
                     $("#question-9").val("");
-                    $("#question-10").val(""); */
+                    $("#question-10").val(""); 
                 });
         });
+        
     </script>
         
     </body>
