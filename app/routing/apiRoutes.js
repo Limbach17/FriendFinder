@@ -25,13 +25,13 @@ router.post("/api/friends", function(req,res){
     for (var i = 0; i < friendsData.length; i++){
         comparison = friendsData[i];
         console.log(comparison.name);
-        totalDiff = 0;
+        totalDiff = Infinity;
         
         for (var j = 0; j < comparison.scores.length; j++){
              var comparisonScore = comparison.scores[j];
              var currentUserScore = userScores[j];
 
-             totalDiff += Math.abs(parseInt(currentUser) - parseInt(comparisonScore));
+             totalDiff += Math.abs(parseInt(currentUserScore) - parseInt(comparisonScore));
         }
 
         if (totalDiff <= bestMatch.scoreDiff) {
@@ -48,7 +48,6 @@ router.post("/api/friends", function(req,res){
 
     friendsData.push(req.body);
     res.json(bestMatch);
-    
 });
 
 module.exports = router;
